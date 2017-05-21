@@ -19,6 +19,5 @@ export default {
 #midi-editor {
   height: 100%;
   overflow: hidden;
-  background-color: darksalmon;
 }
 </style>

@@ -11,7 +11,6 @@
   padding: 10px 25px;
   height: 100%;
   overflow: hidden;
-  background-color: lightgreen;
 }
 
 h1, h2 {

@@ -73,9 +73,9 @@ export default {
   padding: 25px;
   float: left;
   height: 100%;
-  background-color: lightblue;
   position: relative;
   width: 0px;
+  border-right: 1px solid black;
 }
 
 #sidebar[open] {
@@ -105,16 +105,16 @@ export default {
 }
 
 .button-list button {
-  border: none;
+  border: 1px solid black;
   height: 25px;
   width: 100px;
   margin: 5px;
   border-radius: 2px;
-  background-color: seashell
+  /*background-color: seashell*/
 }
 
 .button-list button[disabled] {
-  background-color: ghostwhite;
+  /*background-color: ghostwhite;*/
 }
 
 </style>

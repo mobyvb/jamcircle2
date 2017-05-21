@@ -19,6 +19,5 @@ export default {
 #sound-editor {
   height: 100%;
   overflow: hidden;
-  background-color: goldenrod;
 }
 </style>
