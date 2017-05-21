@@ -5,10 +5,11 @@ Vue.use(Vuex)
 
 var store = new Vuex.Store({
   state: {
-    VISUALIZER_PAGE: 0,
-    MIDI_EDITOR_PAGE: 1,
-    SOUND_EDITOR_PAGE: 2,
-    currentPage: -1
+    HOME_PAGE: 0,
+    VISUALIZER_PAGE: 1,
+    MIDI_EDITOR_PAGE: 2,
+    SOUND_EDITOR_PAGE: 3,
+    currentPage: 0
   },
 
   mutations: {

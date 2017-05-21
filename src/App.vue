@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <sidebar></sidebar>
-    <visualizer v-if="currentPage == VISUALIZER_PAGE"></visualizer>
+    <home v-if="currentPage == HOME_PAGE"></home>
+    <visualizer v-else-if="currentPage == VISUALIZER_PAGE"></visualizer>
     <midi-editor v-else-if="currentPage == MIDI_EDITOR_PAGE"></midi-editor>
     <sound-editor v-else-if="currentPage == SOUND_EDITOR_PAGE"></sound-editor>
-    <home v-else></home>
   </div>
 </template>
 
@@ -19,11 +19,11 @@ import store from './store';
 
 export default {
   components: {
+    Home,
     Sidebar,
     Visualizer,
     MidiEditor,
-    SoundEditor,
-    Home
+    SoundEditor
   },
 
   computed: {
@@ -34,6 +34,7 @@ export default {
 
   data () {
     return {
+      HOME_PAGE: store.state.HOME_PAGE,
       VISUALIZER_PAGE: store.state.VISUALIZER_PAGE,
       MIDI_EDITOR_PAGE: store.state.MIDI_EDITOR_PAGE,
       SOUND_EDITOR_PAGE: store.state.SOUND_EDITOR_PAGE
@@ -44,4 +45,16 @@ export default {
 </script>
 
 <style>
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  font-family: Myriad, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
 </style>
