@@ -18,7 +18,6 @@ var store = new Vuex.Store({
     },
 
     GO_TO_PAGE (state, args) {
-      console.log('changing state page from ' + state.currentPage + ' to ' + args.page);
       state.currentPage = args.page;
     }
   }

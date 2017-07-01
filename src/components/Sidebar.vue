@@ -7,8 +7,8 @@
           @click.prevent="navigateToHome">Home</button>
       </li>
       <li>
-        <button :disabled="currentPage == VISUALIZER_PAGE"
-          @click.prevent="navigateToVisualizer">Jam!</button>
+        <button :disabled="currentPage == JAM_ROOM_PAGE"
+          @click.prevent="navigateToJamRoom">Jam!</button>
       </li>
       <li>
         <button :disabled="currentPage == MIDI_EDITOR_PAGE"
@@ -36,7 +36,7 @@ export default {
   data () {
     return {
       HOME_PAGE: store.state.HOME_PAGE,
-      VISUALIZER_PAGE: store.state.VISUALIZER_PAGE,
+      JAM_ROOM_PAGE: store.state.JAM_ROOM_PAGE,
       MIDI_EDITOR_PAGE: store.state.MIDI_EDITOR_PAGE,
       SOUND_EDITOR_PAGE: store.state.SOUND_EDITOR_PAGE,
       isOpen: true
@@ -48,8 +48,8 @@ export default {
       store.commit('GO_TO_PAGE', {page: this.HOME_PAGE});
     },
 
-    navigateToVisualizer () {
-      store.commit('GO_TO_PAGE', {page: this.VISUALIZER_PAGE});
+    navigateToJamRoom () {
+      store.commit('GO_TO_PAGE', {page: this.JAM_ROOM_PAGE});
     },
 
     navigateToMidiEditor () {
